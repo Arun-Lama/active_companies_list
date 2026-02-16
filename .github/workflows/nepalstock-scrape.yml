@@ -1,0 +1,45 @@
+name: NepalStock Company Scraper
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 2 * * *" # daily at 02:15 UTC
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    env:
+      HEADLESS: "true"
+      OUTPUT_JSON: "companies.json"
+      SCRAPER_FILE: "active_companies.py" # <-- change if your file has a different name
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium beautifulsoup4
+
+      # Optional but helpful if Selenium Manager needs the browser explicitly
+      - name: Ensure Chromium is available
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser || sudo apt-get install -y chromium
+
+      - name: Run scraper
+        run: |
+          python "$SCRAPER_FILE"
+
+      - name: Upload JSON artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nepalstock-companies
+          path: ${{ env.OUTPUT_JSON }}
