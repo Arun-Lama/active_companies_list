@@ -45,10 +45,10 @@ jobs:
 
       - name: Commit and push updated JSON
         run: |
-          if git status --porcelain | grep -q "data/companies.json"; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add data/companies.json
+          if git status --porcelain | grep -q "companies.json"; then
+            git config user.name "arun-lama"
+            git config user.email "mrarunlama@gmail.com"
+            git add companies.json
             git commit -m "Update companies.json (auto)"
             git push
           else

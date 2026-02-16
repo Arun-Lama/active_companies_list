@@ -24,7 +24,7 @@ HEADLESS = os.getenv("HEADLESS", "false").strip().lower() in ("1", "true", "yes"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_JSON = os.getenv(
     "OUTPUT_JSON",
-    os.path.join(BASE_DIR, "nepse_companies_master.json"),
+    os.path.join(BASE_DIR, "companies.json"),
 )
 # ==========================================
 
