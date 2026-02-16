@@ -21,7 +21,11 @@ PULL_LATEST = True
 HEADLESS = os.getenv("HEADLESS", "false").strip().lower() in ("1", "true", "yes")
 
 # Output file (useful for Actions artifacts)
-OUTPUT_JSON = os.getenv("OUTPUT_JSON", "companies.json")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_JSON = os.getenv(
+    "OUTPUT_JSON",
+    os.path.join(BASE_DIR, "nepse_companies_master.json"),
+)
 # ==========================================
 
 
