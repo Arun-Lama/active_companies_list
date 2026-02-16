@@ -3,7 +3,10 @@ name: NepalStock Company Scraper
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 2 * * *" # daily at 02:15 UTC
+    - cron: "16 9 * * *" # daily at 02:15 UTC
+
+permissions:
+  contents: write
 
 jobs:
   scrape:
@@ -11,12 +14,14 @@ jobs:
 
     env:
       HEADLESS: "true"
-      OUTPUT_JSON: "companies.json"
-      SCRAPER_FILE: "active_companies.py" # <-- change if your file has a different name
+      OUTPUT_JSON: "data/companies.json"      # ✅ save into a folder in the repo
+      SCRAPER_FILE: "active_companies.py"    # <-- change if your file has a different name
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,18 +33,28 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium beautifulsoup4
 
-      # Optional but helpful if Selenium Manager needs the browser explicitly
       - name: Ensure Chromium is available
         run: |
           sudo apt-get update
           sudo apt-get install -y chromium-browser || sudo apt-get install -y chromium
 
+      - name: Create output folder
+        run: |
+          mkdir -p data
+
       - name: Run scraper
         run: |
           python "$SCRAPER_FILE"
 
-      - name: Upload JSON artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: nepalstock-companies
-          path: ${{ env.OUTPUT_JSON }}
+      - name: Commit and push updated JSON
+        run: |
+          # Only commit if the file actually changed
+          if git status --porcelain | grep -q "data/companies.json"; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/companies.json
+            git commit -m "Update companies.json (auto)"
+            git push
+          else
+            echo "No changes to commit."
+          fi
