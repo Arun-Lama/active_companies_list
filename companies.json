@@ -3154,5 +3154,17 @@
     "companyEmail": "info@reliancespinningnepal.com",
     "website": "https://www.reliancespinningnepal.com/",
     "regulatoryBody": "SEBON"
+  },
+  {
+    "id": 9308,
+    "companyName": "Hotel Forest Inn Limited",
+    "symbol": "HFIN",
+    "securityName": "Hotel Forest Inn Limited",
+    "status": "Active",
+    "sectorName": "Hotels And Tourism",
+    "instrumentType": "Equity",
+    "companyEmail": "legal.hfin@gmail.com",
+    "website": "https://hotelforestinn.com.np/",
+    "regulatoryBody": "SEBON"
   }
 ]
