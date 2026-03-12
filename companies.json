@@ -3166,5 +3166,17 @@
     "companyEmail": "legal.hfin@gmail.com",
     "website": "https://hotelforestinn.com.np/",
     "regulatoryBody": "SEBON"
+  },
+  {
+    "id": 9311,
+    "companyName": "Solu Hydropower Limited",
+    "symbol": "SOHL",
+    "securityName": "Solu Hydropower Limited",
+    "status": "Active",
+    "sectorName": "Hydro Power",
+    "instrumentType": "Equity",
+    "companyEmail": "info@soluhydro.com",
+    "website": "www.soluhydro.com",
+    "regulatoryBody": "SEBON"
   }
 ]
