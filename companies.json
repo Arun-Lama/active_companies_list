@@ -3178,5 +3178,17 @@
     "companyEmail": "info@soluhydro.com",
     "website": "www.soluhydro.com",
     "regulatoryBody": "SEBON"
+  },
+  {
+    "id": 9322,
+    "companyName": "Bhujung Hydropower Limited",
+    "symbol": "BJHL",
+    "securityName": "Bhujung Hydropower Limited",
+    "status": "Active",
+    "sectorName": "Hydro Power",
+    "instrumentType": "Equity",
+    "companyEmail": "bhujung.hydro@gmail.com",
+    "website": "",
+    "regulatoryBody": "SEBON"
   }
 ]
