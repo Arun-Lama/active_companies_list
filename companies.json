@@ -3190,5 +3190,17 @@
     "companyEmail": "bhujung.hydro@gmail.com",
     "website": "",
     "regulatoryBody": "SEBON"
+  },
+  {
+    "id": 9323,
+    "companyName": "Super Khudi Hydropower Limited",
+    "symbol": "SKHL",
+    "securityName": "Super Khudi Hydropower Limited",
+    "status": "Active",
+    "sectorName": "Hydro Power",
+    "instrumentType": "Equity",
+    "companyEmail": "info@superkhudi.com.np",
+    "website": "www.superkhudi.com.np",
+    "regulatoryBody": "SEBON"
   }
 ]
