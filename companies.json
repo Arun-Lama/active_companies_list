@@ -3202,5 +3202,17 @@
     "companyEmail": "info@superkhudi.com.np",
     "website": "www.superkhudi.com.np",
     "regulatoryBody": "SEBON"
+  },
+  {
+    "id": 9324,
+    "companyName": "Ridge Line Energy Limited",
+    "symbol": "RLEL",
+    "securityName": "Ridge Line Energy Limited",
+    "status": "Active",
+    "sectorName": "Hydro Power",
+    "instrumentType": "Equity",
+    "companyEmail": "info@ridgeline.com.np",
+    "website": "www.ridgeline.com.np",
+    "regulatoryBody": "SEBON"
   }
 ]
