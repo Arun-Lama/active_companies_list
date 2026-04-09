@@ -3226,5 +3226,29 @@
     "companyEmail": "info@suryakundahydro.com.np",
     "website": "www.suryakundahydro.com.np",
     "regulatoryBody": "SEBON"
+  },
+  {
+    "id": 9329,
+    "companyName": "Shikhar power Development Limited",
+    "symbol": "SIPD",
+    "securityName": "Shikhar power Development Limited",
+    "status": "Active",
+    "sectorName": "Hydro Power",
+    "instrumentType": "Equity",
+    "companyEmail": "shikhar.power71@gmail.com",
+    "website": "shikharpower.com.np",
+    "regulatoryBody": "SEBON"
+  },
+  {
+    "id": 9330,
+    "companyName": "Palpa Cement Industries Limited",
+    "symbol": "PCIL",
+    "securityName": "Palpa Cement Industries Limited",
+    "status": "Active",
+    "sectorName": "Manufacturing And Processing",
+    "instrumentType": "Equity",
+    "companyEmail": "info@rmcnepal.com",
+    "website": "www.tansencement.com",
+    "regulatoryBody": "SEBON"
   }
 ]
